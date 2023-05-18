@@ -1,0 +1,51 @@
+---
+import Layout from '../../layouts/Page.astro'
+import ArtPreview from "../../components/Arts/ArtPreview.astro";
+import { getAllArtinner } from '../../lib/api.js';
+import { getSanityImageURL, formatBlogPostDate, formatMusicPerv } from '../../utils/helpers.js'
+import CldImage from '../../components/CldImage.astro';
+import ArtList from '../../components/Music/ArtList.astro';
+
+
+const getAllArtinners = await getAllArtinner();
+const seo = {
+  title: 'Arts',
+  description: 'TheFoxxStuff Artworks',
+}
+
+export interface Props {
+  art: any;
+}
+
+
+const { art } = Astro.props;
+---
+
+
+<Layout seo={seo}>
+
+  <ArtList music={getAllArtinners}/>
+  
+
+        <!-- {allArtsData.map((art) =>
+    <h1 class="heading">{formatMusicPerv(art.date)}</h1>
+    <div class="relises">
+        
+
+        
+        {art.images.map((image) => (
+            <a href={`/arts/${image.slug.current}`}>
+        <div class="photo-box">
+          {<CldImage width="200" height="200" src={getSanityImageURL(image.image).url()} />}
+
+        </div>
+      </a>
+))}
+
+            
+            </div>)} -->
+
+</Layout>
+
+
+  

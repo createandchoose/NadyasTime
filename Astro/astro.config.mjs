@@ -9,7 +9,7 @@ import cloudflare from "@astrojs/cloudflare";
 export default defineConfig({
     site: 'https://thefoxxstuff-net.pages.dev',
     integrations: [mdx(), sitemap(), sanity({
-        projectId: 'ndh6wvwa',
+        projectId: '5ubnyen7',
         dataset: 'production',
         apiVersion: '2021-03-25',
         useCdn: true

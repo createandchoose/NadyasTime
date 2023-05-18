@@ -29,11 +29,5 @@ export default defineType({
             type: 'reference',
             to: [{ type: 'arts' }]
         }),
-        defineField({
-            title: 'Right DOWN-2',
-            name: 'pic5',
-            type: 'reference',
-            to: [{ type: 'arts' }]
-        }),
     ]
 })

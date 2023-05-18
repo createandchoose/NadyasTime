@@ -29,5 +29,10 @@ export default defineType({
             title: 'Description',
             type: 'blockContent',
         }),
+        defineField({
+            name: 'publishedAt',
+            title: 'Published at',
+            type: 'datetime',
+        }),
     ]
 })
