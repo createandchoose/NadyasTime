@@ -849,7 +849,7 @@
      border-bottom-color: #3898ec;
      border-left-color: #3898ec;
      border-right-color: #3898ec;
-     background-image: url(../../static/custom-checkbox-checkmark.589d534424.svg);
+     /* background-image: url(../../static/custom-checkbox-checkmark.589d534424.svg); */
      background-position: 50% 50%;
      background-size: cover;
      background-repeat: no-repeat;
@@ -3191,7 +3191,7 @@
      border-color: #18191a;
      border-radius: 3px;
      background-color: #18191a;
-     background-image: url("../63898f18251e56f43648669e_check-white.svg");
+     /* background-image: url("../63898f18251e56f43648669e_check-white.svg"); */
      background-position: 50% 50%;
      background-size: auto;
    }
