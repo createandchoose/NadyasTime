@@ -4,9 +4,4 @@ import { getAllArtinner } from '../../lib/api.js';
 const getAllArtinners = await getAllArtinner();
 ---
 
-<div class="relises">
-  {getAllArtinners.map((arts) =>
-    <ArtsPreview music={arts} />)}
-</div>
-
-
+  {getAllArtinners.slice(0, 4).map(arts => <ArtsPreview arts={arts} />)}

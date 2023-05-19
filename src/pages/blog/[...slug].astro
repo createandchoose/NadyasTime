@@ -29,6 +29,7 @@ import { getSanityImageURL } from '../../utils/helpers.js';
 import { getAllArtinner } from '../../lib/api.js';
 import SanityPortableText from '../../components/SanityPortableText.astro';
 import CldImage from '../../components/CldImage.astro';
+import { formatBlogPostDate } from '../../utils/helpers.js'
 
 const art = await getAllArtinner();
 const { slug } = Astro.params;
@@ -59,13 +60,13 @@ const { title, description, image, current } = arts;
 
 const seo = {
   title: title,
-  description: `Artwork: ${title} | ${description}` ,
+  description: `Блог: ${title} | ${description}` ,
   description: description,
   image: getSanityImageURL(image).width(1200).url(),
 }
 ---
 <Layout seo={seo}>
-<div class="div-block-2"></div>
+<!-- <div class="div-block-2"></div>
 <div class="dirbox">
       <div class="dirbox">
           <h1 class="heading-isssn">{title}</h1>
@@ -105,48 +106,25 @@ const seo = {
       </div>
     </div>
   </div>
+</div> -->
+
+
+
+<div class="blog-detail-section section-spacing wf-section">
+	<div class="container-medium w-container">
+		<div id="w-node-cbfa1dc0-5694-caf3-0c77-9876848d6f04-89419815" class="blog-detail">
+			<div class="blog-detail-date">{formatBlogPostDate(arts.publishedAt)}</div>
+			<h1>{title}</h1>
+			<div class="blog-detail-meta">
+				<div class="blog-dash"></div>
+				Публикация:&nbsp;<a href="/about" style="text-decoration: none;">Посельская Надежда</a>
+			</div>
+      {<CldImage class="artworkscreen" width="100%" alt={description} src={getSanityImageURL(image).url()} />}
+			<div id="w-node-cbfa1dc0-5694-caf3-0c77-9876848d6f0e-89419815" class="blog-rich-text">
+				<div class="w-richtext">
+          <SanityPortableText portableText={description} />
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
-
-
-  <!-- {art.images.map((images) =>
-    <ArtPage art={images} />)} -->
-
-  <!-- {art.images.map((images) =>
-    <ArtPage art={images} />)} -->
-
-  <!-- {art.images.map(images => (
-    <h1>{images.title}</h1>
-    ))} -->
-
-  <!-- {art => art.images && art.images.map((images) => ({
-    params: {
-        slug: images.slug.current,
-    },
-    props: {
-        art
-    }
-  }))
-  }
-
-  <h1>{art.images.title}</h1> -->
-
-
-  <!-- <ArtPage art={art}/> -->
-</Layout>
-<style>
-  .artworkscreen {
-    margin-top: 20px;
-    border-radius: 8px;
-    margin-bottom: 20px;
-  }
-  .buttonmusic {
-    margin-right: 0px;
-  }
-  .w-cols {
-    padding-left: 0px;
-    padding-right: 0px;
-  }
-  .m2 {
-    margin-right: 4px;
-  }
-</style>

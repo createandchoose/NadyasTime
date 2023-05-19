@@ -1,0 +1,40 @@
+---
+import Container from './Container.astro';
+import Logo from './Logo.astro';
+import SocialList from './SocialList.astro';
+---
+
+<script>
+  import './ThemeToggleButton/theme-toggle-button'
+</script>
+
+<header>
+    <div class="bg-light"></div>
+    <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navbar w-nav">
+        <div class="container w-container">
+            <div class="w-layout-grid navbar-grid">
+                <a href="index.htm" aria-current="page" class="w-nav-brand w--current"><img src="/logo.svg" loading="lazy" alt="" /></a>
+                <nav role="navigation" id="w-node-_922e06dd-e631-2b33-56c2-82ba8f528491-8f52848c" class="nav-menu w-nav-menu">
+                    <a href="/" aria-current="page" class="nav-link w-nav-link w--current">Главная</a><a href="blog" class="nav-link w-nav-link">Блог</a><a href="/about" class="nav-link w-nav-link">Обо мне</a>
+                    <div data-hover="true" data-delay="0" data-w-id="37480278-dd5b-8dba-cc7c-d67dbf231d85" class="nav-link w-dropdown">
+                        <nav data-w-id="37480278-dd5b-8dba-cc7c-d67dbf231d8a" class="dropdown-list w-dropdown-list">
+                            <a href="/" aria-current="page" class="dropdown-link w-dropdown-link w--current">Главная</a><a href="/blog" class="dropdown-link w-dropdown-link">Блог</a>
+                            <a href="/about" class="dropdown-link w-dropdown-link">Обо мне</a>
+                        </nav>
+                    </div>
+                </nav>
+                <div id="w-node-d282f62d-7074-1ae0-31d8-34b2d1cfc19d-8f52848c" class="nav-menu-right">
+                    <div id="w-node-_922e06dd-e631-2b33-56c2-82ba8f528498-8f52848c" class="menu-button w-nav-button">
+                        <div class="w-icon-nav-menu"></div>
+                    </div>
+                    <div class="nav-button-wrap">
+                        <button class="button-white nav-button" type="button">Связаться</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+</header>
+

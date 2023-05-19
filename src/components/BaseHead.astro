@@ -13,7 +13,7 @@ export interface Props {
 const title = Astro.props.title || settings.title;
 const description = Astro.props.description || settings.description;
 const canonicalURL = Astro.props.canonicalURL || new URL(Astro.url.pathname, Astro.site);
-const image = new URL(Astro.props.image || 'https://res.cloudinary.com/dzrynvom0/image/upload/v1674589724/social_hrxob1.png', Astro.site);
+const image = new URL(Astro.props.image || '', Astro.site);
 ---
 
 <meta charset="utf-8" />
@@ -22,10 +22,10 @@ const image = new URL(Astro.props.image || 'https://res.cloudinary.com/dzrynvom0
 <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 <link rel="icon" type="image/svg" href="/favicon.svg" />
 <!-- Primary Meta Tags -->
-<title>{title || settings.title} | TheFoxxStuff</title>
+<title>{title || settings.title} | NadyasPosts</title>
 <meta name="title" content={title || settings.title} />
 
-<meta name="keywords" content="thefoxxstuff, furry, music, breakcore, hardcore, happyhardcore, drumandbass, yakutsk, yakutsk music, ykt music, stuff,lapfox, lapfox trax, renard lapfox, halleylabs">
+<meta name="keywords" content="Блог">
 
 <meta name="description" content={description || settings.description} />
 <meta name="generator" content={Astro.generator} />

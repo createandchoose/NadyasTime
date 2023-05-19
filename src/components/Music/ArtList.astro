@@ -1,0 +1,9 @@
+---
+import ArtsPreview from "./ArtsPreview.astro";
+import { getAllArtinner } from '../../lib/api.js';
+const getAllArtinners = await getAllArtinner();
+---
+
+  {getAllArtinners.map((arts) =>
+    <ArtsPreview arts={arts} />)}
+

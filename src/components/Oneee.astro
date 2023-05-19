@@ -20,9 +20,21 @@ const { picccData } = Astro.props;
                         <div role="listitem" class="w-dyn-item">
                             <a data-w-id="738bd153-05ca-9693-890c-c7fd7e38bb25" href={`/blog/${picccData.RightUp1.slug.current}`} class="blog-item w-inline-block">
                                 <div class="blog-image-wrap">
-                                    <CldImage src={getSanityImageURL(picccData.RightUp1.image).url()}></CldImage>
-                                    <div class="blog-overlay"></div>
+    
+                                    <!-- <CldImage class="blog-image" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" src={getSanityImageURL(picccData.RightUp1.image).url()}></CldImage>
+                                    <div class="blog-overlay"></div> -->
 
+                                    <CldImage
+                                    src={getSanityImageURL(picccData.RightUp1.image).url()}
+                                    loading="eager"
+                                    style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"
+                                    alt=""
+                                    sizes="(max-width: 479px) 94vw, (max-width: 767px) 95vw, (max-width: 991px) 96vw, 94vw"
+                                    srcset={`${getSanityImageURL(picccData.RightUp1.image).url()} 500w,${getSanityImageURL(picccData.RightUp1.image).url()} 800w, ${getSanityImageURL(picccData.RightUp1.image).url()} 1000w`}
+                                    class="blog-image"
+                                />
+                                
+                                    as
                                 </div>
                                 <div class="blog-info">
                                     <h1 class="blog-title heading-h4">{picccData.RightUp1.title}</h1>
@@ -37,7 +49,7 @@ const { picccData } = Astro.props;
                             <div role="listitem" class="w-dyn-item">
                                 <a data-w-id="a243d4f4-3320-3fcc-0a66-4e980ad34eaf" href={`/blog/${picccData.RightUp2.slug.current}`} class="blog-item-small w-inline-block">
                                     <div class="blog-image-wrap">
-                                        <CldImage src={getSanityImageURL(picccData.RightUp2.image).url()}></CldImage>
+                                        <CldImage class="blog-image" src={getSanityImageURL(picccData.RightUp2.image).url()}></CldImage>
                                     </div>
                                     <div class="blog-info-content">
                                         <h2 class="blog-title heading-h6">{picccData.RightUp2.title}</h2>
@@ -47,7 +59,7 @@ const { picccData } = Astro.props;
                             <div role="listitem" class="w-dyn-item">
                                 <a data-w-id="a243d4f4-3320-3fcc-0a66-4e980ad34eaf" href={`/blog/${picccData.RightDown1.slug.current}`} class="blog-item-small w-inline-block">
                                     <div class="blog-image-wrap">
-                                        <CldImage src={getSanityImageURL(picccData.RightDown1.image).url()}></CldImage>
+                                        <CldImage class="blog-image" src={getSanityImageURL(picccData.RightDown1.image).url()}></CldImage>
                                     </div>
                                     <div class="blog-info-content">
                                         <h2 class="blog-title heading-h6">{picccData.RightDown1.title}</h2>

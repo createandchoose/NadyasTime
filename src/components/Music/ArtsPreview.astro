@@ -1,0 +1,58 @@
+---
+import { getSanityImageURL, formatMusicPerv } from '../../utils/helpers'
+import CldImage from '../../components/CldImage.astro';
+import { formatBlogPostDate } from '../../utils/helpers.js'
+export interface Props {
+  arts: any;
+}
+  
+const { arts } = Astro.props;
+---
+  <!-- <a href={`/blog/${arts.slug.current}`}>
+      <div class="relise">
+          <div class="relise-con">
+              <div class="test900">
+                <CldImage width="200" height="200" src={getSanityImageURL(arts.image).url()}/></div>
+              <div class="resile-text-box">
+                  <div class="relise-text">{arts.title}</div>
+                  <div class="resile-text-2">{formatBlogPostDate(arts.publishedAt)}</div>
+              </div>
+          </div>
+      </div>
+  </a> -->
+
+  <div role="listitem" class="w-dyn-item">
+    <a data-w-id="d0986bde-d065-a368-9e7d-83477550ccfd" href="blog/questions-everyone-working-in-it-should.html" class="blog-item w-inline-block">
+      <div class="blog-image-wrap">
+        <!-- <CldImage sizes="100vw" class="blog-image" loading="eager"
+        style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" src={getSanityImageURL(arts.image).url()}/>
+        <img
+          src=""
+          loading="eager"
+          style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"
+          alt=""
+          sizes="100vw"
+          srcset=" 500w,  800w, "
+          class="blog-image"
+        /> -->
+        <CldImage
+	src={getSanityImageURL(arts.image).url()}
+	loading="eager"
+	style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"
+	alt=""
+	sizes="(max-width: 479px) 94vw, (max-width: 767px) 45vw, (max-width: 991px) 46vw, 21vw"
+	srcset={`${getSanityImageURL(arts.image).url()} 500w,${getSanityImageURL(arts.image).url()} 800w, ${getSanityImageURL(arts.image).url()} 1000w`}
+	class="blog-image"
+/>
+
+      </div>
+      <div class="blog-info-content">
+        <h4 class="blog-title heading-h6">Questions everyone working in IT should</h4>
+        <div class="author-info">
+          <div>By</div>
+          <div>Amanda Reed</div>
+        </div>
+      </div>
+    </a>
+  </div>
+  
