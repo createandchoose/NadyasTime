@@ -15,7 +15,7 @@ import Oneee from '../components/Oneee.astro';
 import CldImage from '../components/CldImage.astro';
 const getGalaryMainPages = await getGalaryMainPage();
 const getAllRels = await getAllRel();
-import ArtList from '../components/Music/ArtList.astro';
+import ArtsListMain from '../components/Music/ArtsListMain.astro';
 import { getAllArtinner } from '../lib/api.js';
 
 const getAllArtinners = await getAllArtinner();
@@ -43,25 +43,18 @@ const { picccData } = Astro.props;
             <div class="section-title">
                 <h3 class="heading-h6">Последние статьи</h3>
             </div>
-            <div class="w-dyn-list">
-                <ArtList music={getAllArtinners}/>
-                <!-- <div role="list" class="grid-blog w-dyn-items">
-                    <div role="listitem" class="w-dyn-item">
-                        <a href="blog/5-cliches-about-blog-you-should-avoid.html" class="blog-item w-inline-block">
-                            <div class="blog-image-wrap"><img src="638994e3ac476c94ba486f9c/638ad03a0787c79113c94082_blog-10.jpg" loading="eager" style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
-                                    alt="" sizes="(max-width: 479px) 94vw, (max-width: 767px) 45vw, (max-width: 991px) 46vw, 21vw" srcset="638994e3ac476c94ba486f9c/638ad03a0787c79113c94082_blog-10-p-500.jpg 500w, 638994e3ac476c94ba486f9c/638ad03a0787c79113c94082_blog-10-p-800.jpg 800w, 638994e3ac476c94ba486f9c/638ad03a0787c79113c94082_blog-10.jpg 1000w"
-                                    class="blog-image"></div>
-                            <div class="blog-info-content">
-                                <h4 class="blog-title heading-h6">5 Cliches About Blog You Should Avoid</h4>
-                                <div class="author-info">
-                                    <div>By</div>
-                                    <div>Lori Stevens</div>
-                                </div>
-                            </div>
-                        </a>
+
+            <div class="blog-section section-spacing-bottom wf-section">
+                <div class="container w-container">
+                    <div class="w-dyn-list">
+                        <div role="list" class="grid-blog w-dyn-items">
+                    <ArtsListMain music={getAllArtinners}/>
+                        </div>
                     </div>
-                </div> -->
+                </div>
             </div>
+            
+
         </div>
     </div>
 </body>

@@ -8,33 +8,9 @@ export interface Props {
   
 const { arts } = Astro.props;
 ---
-  <!-- <a href={`/blog/${arts.slug.current}`}>
-      <div class="relise">
-          <div class="relise-con">
-              <div class="test900">
-                <CldImage width="200" height="200" src={getSanityImageURL(arts.image).url()}/></div>
-              <div class="resile-text-box">
-                  <div class="relise-text">{arts.title}</div>
-                  <div class="resile-text-2">{formatBlogPostDate(arts.publishedAt)}</div>
-              </div>
-          </div>
-      </div>
-  </a> -->
-
   <div role="listitem" class="w-dyn-item">
-    <a data-w-id="d0986bde-d065-a368-9e7d-83477550ccfd" href="blog/questions-everyone-working-in-it-should.html" class="blog-item w-inline-block">
+    <a data-w-id="d0986bde-d065-a368-9e7d-83477550ccfd" href={`/blog/${arts.slug.current}`} class="blog-item w-inline-block">
       <div class="blog-image-wrap">
-        <!-- <CldImage sizes="100vw" class="blog-image" loading="eager"
-        style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" src={getSanityImageURL(arts.image).url()}/>
-        <img
-          src=""
-          loading="eager"
-          style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"
-          alt=""
-          sizes="100vw"
-          srcset=" 500w,  800w, "
-          class="blog-image"
-        /> -->
         <CldImage
 	src={getSanityImageURL(arts.image).url()}
 	loading="eager"
@@ -47,10 +23,9 @@ const { arts } = Astro.props;
 
       </div>
       <div class="blog-info-content">
-        <h4 class="blog-title heading-h6">Questions everyone working in IT should</h4>
+        <h4 class="blog-title heading-h6">{arts.title}</h4>
         <div class="author-info">
-          <div>By</div>
-          <div>Amanda Reed</div>
+          <div>{formatBlogPostDate(arts.publishedAt)}</div>
         </div>
       </div>
     </a>

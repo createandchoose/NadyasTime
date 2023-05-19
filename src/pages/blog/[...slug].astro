@@ -29,8 +29,11 @@ import { getSanityImageURL } from '../../utils/helpers.js';
 import { getAllArtinner } from '../../lib/api.js';
 import SanityPortableText from '../../components/SanityPortableText.astro';
 import CldImage from '../../components/CldImage.astro';
-import { formatBlogPostDate } from '../../utils/helpers.js'
+import { formatBlogPostDate } from '../../utils/helpers.js';
+import ArtsListLast from '../../components/Music/ArtsListLast.astro';
 
+
+const getAllArtinners = await getAllArtinner();
 const art = await getAllArtinner();
 const { slug } = Astro.params;
 const arts = art.find((art) => art.slug.current === slug);
@@ -117,7 +120,7 @@ const seo = {
 			<h1>{title}</h1>
 			<div class="blog-detail-meta">
 				<div class="blog-dash"></div>
-				Публикация:&nbsp;<a href="/about" style="text-decoration: none;">Посельская Надежда</a>
+				Публикация:&nbsp;<a href="/about" style="text-decoration: none;">Посельская Надя</a>
 			</div>
       {<CldImage class="artworkscreen" width="100%" alt={description} src={getSanityImageURL(image).url()} />}
 			<div id="w-node-cbfa1dc0-5694-caf3-0c77-9876848d6f0e-89419815" class="blog-rich-text">
@@ -126,5 +129,17 @@ const seo = {
 				</div>
 			</div>
 		</div>
+
 	</div>
+</div>
+
+<div class="blog-section wf-section">
+  <div class="container w-container">
+    <div class="section-title"><h3 class="heading-h6">Недавние посты</h3></div>
+    <div class="w-dyn-list">
+      <div role="list" class="grid-blog w-dyn-items">
+        <ArtsListLast music={getAllArtinners}/>
+      </div>
+    </div>
+  </div>
 </div>

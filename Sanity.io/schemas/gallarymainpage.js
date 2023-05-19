@@ -2,29 +2,29 @@ import { defineField, defineType } from 'sanity'
 
 export default defineType({
     name: 'gallarymainpage',
-    title: '[Gallary] - MainPage',
+    title: 'Главная страница [3 поста]',
     type: 'document',
     fields: [
         defineField({
-            title: 'One Big',
+            title: 'Большой',
             name: 'pic1',
             type: 'reference',
             to: [{ type: 'arts' }]
         }),
         defineField({
-            title: 'Right UP-1',
+            title: 'Справа сверху',
             name: 'pic2',
             type: 'reference',
             to: [{ type: 'arts' }]
         }),
         defineField({
-            title: 'Right UP-2',
+            title: 'Справа снизу',
             name: 'pic3',
             type: 'reference',
             to: [{ type: 'arts' }]
         }),
         defineField({
-            title: 'Right DOWN-1',
+            title: '❌❌❌ не работает (не должно быть пустым)',
             name: 'pic4',
             type: 'reference',
             to: [{ type: 'arts' }]

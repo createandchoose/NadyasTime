@@ -2,22 +2,22 @@ import { defineField, defineType } from 'sanity'
 
 export default defineType({
     name: 'arts',
-    title: 'Arts',
+    title: 'Посты',
     type: 'document',
     fields: [
         defineField({
             name: 'image',
-            title: 'Image',
+            title: 'Обложка поста',
             type: 'image',
         }),
         defineField({
             name: 'title',
-            title: 'Title',
+            title: 'Название',
             type: 'string',
         }),
         defineField({
             name: 'slug',
-            title: 'Slug',
+            title: 'Ссылка на пост',
             type: 'slug',
             options: {
                 source: 'title',
@@ -26,12 +26,12 @@ export default defineType({
         }),
         defineField({
             name: 'description',
-            title: 'Description',
+            title: 'Текст поста',
             type: 'blockContent',
         }),
         defineField({
             name: 'publishedAt',
-            title: 'Published at',
+            title: 'Дата выпуска',
             type: 'datetime',
         }),
     ]
