@@ -50,7 +50,7 @@ export async function getAllArts() {
 }
 
 export async function getAllArtinner() {
-    const query = `*[_type == 'arts']`;
+    const query = `*[_type == 'arts'] |order(publishedAt desc)`;
     const data = await useSanityClient().fetch(query);
     return data;
 }
