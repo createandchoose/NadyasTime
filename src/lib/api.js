@@ -31,6 +31,12 @@ export async function getAllRelinner() {
     return data;
 }
 
+export async function getSiteName() {
+    const query = `*[_type == 'author'] {name}`;
+    const data = await useSanityClient().fetch(query);
+    return data[0].name; // возвращает имя первого автора в результате
+}
+
 // export async function getAllArts() {
 //     const query = `*[_type == 'art']{..., "images": images[]->{slug, image, ...}} | order(publishedAt desc)`;
 //     const data = await useSanityClient().fetch(query);

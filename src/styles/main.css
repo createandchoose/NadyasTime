@@ -12,6 +12,19 @@
    /* ==========================================================================
       Start of custom Webflow CSS
       ========================================================================== */
+      @font-face {
+        font-family: "DrukWideCyrMedium";
+        src: url("/fonts/DrukWideCyrMedium.woff2");
+    }
+    .sitenames {
+      font-family: "DrukWideCyrMedium";
+      font-size: 18px;
+    }
+    .sitename {
+      font-family: "DrukWideCyrMedium";
+      margin-bottom: 24px;
+      font-size: 18px;
+    }
    .w-layout-grid {
      display: -ms-grid;
      display: grid;
@@ -4660,7 +4673,8 @@
      .nav-menu {
        padding-top: 10px;
        padding-bottom: 10px;
-       background-color: #18191a;
+       background-color: #ffffffb3;
+       backdrop-filter: blur(12px);
      }
    
      .subscribe-section-title {

@@ -18,7 +18,12 @@ const getAllRels = await getAllRel();
 import ArtsListMain from '../components/Music/ArtsListMain.astro';
 import { getAllArtinner } from '../lib/api.js';
 
+import { getSiteName } from '../lib/api.js';
+const siteName = await getSiteName();
+
 const getAllArtinners = await getAllArtinner();
+
+
 
 const seo = {
   title: 'Главная',
@@ -29,7 +34,7 @@ export interface Props {
     picccData: any;
 }
 
-const { picccData } = Astro.props;
+// const { picccData } = Astro.props;
 
 ---
 
